@@ -1,3 +1,36 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+::-webkit-scrollbar-track-piece {						/* Fond */
+    display: none;
+}
+::-webkit-scrollbar {									/* Scrollbars */
+    width: 10px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {								/* Barre */
+    border: #ffffff 3px solid;
+    -webkit-border-radius: 20px;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    background: #5271FF;
+}
+::-webkit-scrollbar-thumb:hover {						/* Barre */
+    background: #5271FF;
+}
+
+@media only screen and (max-width: 600px) {
+    ::-webkit-scrollbar {									/* Scrollbars */
+        width: 0;
+        height: 0;
+    }
+    ::-webkit-scrollbar-thumb {								/* Barre */
+        border: none;
+        -webkit-border-radius: 0;
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb:hover {						/* Barre */
+        background: transparent;
+    }
+}
